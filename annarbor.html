@@ -4,6 +4,23 @@
 	<meta charset="utf-8">
 	<title>Ann Arbor</title>
 	<meta name ="viewport" content="width=device-width, initial-scale=1">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134949766-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-134949766-2');
+	</script>
+	<!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<!-- bootstrap -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -20,7 +37,7 @@
 <body>
 	<div id="wrap">
 		<a class="skip" href="#content">Skip to Content</a>
-		<nav class="navbar navbar-expand-md navbar-light">
+		<nav class="navbar navbar-expand-md navbar-light fixed-top">
 		    <a class="navbar-brand abs" href="/week6">
 		    	<img class="logo" src="images/logo.png" alt="logo" />
 		    </a>
@@ -53,17 +70,73 @@
 			</header>
 			<main>
 				<div id="content">
-					<p>Hello, About restaurants in Ann Arbor. I've visited several restaurants in Ann Arbor during university. Similar to the "Seoul" page, I would like to create a specialized page for Ann Arbor restaurants. Since this page is similar to "Seoul" page, I only included one of the images that I'll use for this page: "macaron.png".</p>
+					<p>Ann Arbor is a college city and a home to the University of Michigan. I have lived here for four years and visited several restaurants that I want to share!</p>
 				</div>
 				<div class="gallery">
-					<img src="images/macaron.jpg" alt="macaron" />
-					<img src="images/mani.jpg" alt="mani" />
-					<img src="images/lee.jpg" alt="lee" />
-					<img src="images/charleys.jpg" alt="goodtimecharleys" />
-					<img src="images/pizzahouse.jpg" alt="pizzahouse" />
-					<img src="images/wilmas.jpg" alt="wilma's" />
-					<img src="images/chinagate.jpg" alt="chinagate" />
-					<img src="images/panda.jpg" alt="pandabon" />
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/macaron.jpg" alt="macaron" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal1">Le Bon Macaron</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/mani.jpg" alt="mani" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal2">Mani</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/lee.jpg" alt="lee" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal3">Yee Siang Dumplings</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/charleys.jpg" alt="goodtimecharleys" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal4">Good Time Charleys</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/pizzahouse.jpg" alt="pizzahouse" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal5">Pizza House</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/wilmas.jpg" alt="wilma's" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal6">Wilma's</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/chinagate.jpg" alt="chinagate" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal7">China Gate</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/panda.jpg" alt="pandabon" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal8">Panda</a>
+							</p>
+						</div>
+					</div>
 				</div>
 			</main>
 			<footer>
@@ -72,6 +145,307 @@
 		        </div>
 			</footer>
         </div>
+
+        <!-- modals -->
+        <div class="modal" id="modal1" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Le Bon Macaron</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p>
+						<p>211 S 4th Ave, Ann Arbor, MI 48104</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Monday</td>
+								<td>9AM–6PM</td>
+							</tr>
+							<tr>
+								<td>Tuesday</td>
+								<td>9AM–6PM</td>
+							</tr>
+							<tr>
+								<td>Wednesday</td>
+								<td>9AM–6PM</td>
+							</tr>
+							<tr>
+								<td>Thursday</td>
+								<td>9AM-9PM</td>
+							</tr>
+							<tr>
+								<td>Friday</td>
+								<td>9AM-9PM</td>
+							</tr>
+							<tr>
+								<td>Saturday</td>
+								<td>9AM-9PM</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>10AM-9PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal2" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Mani</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p>
+						<p>341 E Liberty St, Ann Arbor, MI 48104</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Monday</td>
+								<td>Closed</td>
+							</tr>
+							<tr>
+								<td>Tuesday</td>
+								<td>11:30AM–10PM</td>
+							</tr>
+							<tr>
+								<td>Wednesday</td>
+								<td>11:30AM–10PM</td>
+							</tr>
+							<tr>
+								<td>Thursday</td>
+								<td>11:30AM–10PM</td>
+							</tr>
+							<tr>
+								<td>Friday</td>
+								<td>11:30AM–11PM</td>
+							</tr>
+							<tr>
+								<td>Saturday</td>
+								<td>12PM-11PM</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>11AM-9PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal3" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Yee Siang Dumplings</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p>
+						<p>4837 Washtenaw Ave, Ann Arbor, MI 48108</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Monday</td>
+								<td>Closed</td>
+							</tr>
+							<tr>
+								<td>Tuesday</td>
+								<td>11AM–9PM</td>
+							</tr>
+							<tr>
+								<td>Wednesday</td>
+								<td>11AM–9PM</td>
+							</tr>
+							<tr>
+								<td>Thursday</td>
+								<td>11AM–9PM</td>
+							</tr>
+							<tr>
+								<td>Friday</td>
+								<td>11AM–9:30PM</td>
+							</tr>
+							<tr>
+								<td>Saturday</td>
+								<td>11AM–9:30PM</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>11AM–9PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal4" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Good Time Charleys</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p>
+						<p>1140 S University Ave, Ann Arbor, MI 48104</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Monday - Saturday</td>
+								<td>12PM–2AM</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>5PM–2AM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal5" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Pizza House</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p>
+						<p>618 Church St, Ann Arbor, MI 48104</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Everyday</td>
+								<td>10:30AM–4AM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal6" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Wilma's</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p>
+						<p>403 E Washington St, Ann Arbor, MI 48104</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Monday - Saturday</td>
+								<td>9AM–9PM</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>9AM–4PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal7" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">China Gate</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p>
+						<p>1201 S University Ave, Ann Arbor, MI 48104</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Everyday</td>
+								<td>11AM–10PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="modal" id="modal8" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Panda</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p>
+						<p>3020 Packard St, Ann Arbor, MI 48108</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Monday - Saturday</td>
+								<td>11AM–2:30PM, 5–9:30PM</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>Closed</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script>
 	function myFunction() {

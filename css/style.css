@@ -17,7 +17,7 @@ h1{
 }
 
 h2{
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 1.5em;
 }
 
@@ -28,7 +28,7 @@ p{
 }
 
 #wrap{
-	margin: 30px auto;
+	margin: 100px auto 30px;
     overflow-y: hidden;
 }
 
@@ -48,7 +48,10 @@ p{
 /*nav*/
 
 .navbar{
-	margin: 10px;
+	background-color: #fff;
+	padding: 10px;
+	min-height: 90px;
+	border-bottom: 1px solid #DCDCDC;
 }
 
 .nav-item{
@@ -70,8 +73,6 @@ p{
 	font-weight: 900;
 	border-bottom: 2px solid;
 }
-
-
 
 .logo{
 	width: 60px;
@@ -104,10 +105,8 @@ main{
 
 /*index*/
 .heading{
-	height: 400px;
+	height: 200px;
 	position: relative;
-	background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url(../images/banner.jpg);
-    background-size: cover;
 }
 .heading>div{
 	height: 330px;
@@ -130,6 +129,7 @@ main{
 }
 
 .grids{
+	margin: 100px auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -181,7 +181,7 @@ figcaption{
 	display: grid;
 	-ms-grid-columns: auto auto auto auto;
     grid-template-columns: auto auto auto auto;
-	grid-gap: 5px;
+	grid-gap: 20px;
 	justify-content: center;
 	justify-items: center;
 }
@@ -191,7 +191,6 @@ figcaption{
 }
 .gallery img{
 	width: 100%;
-	padding: 10px;
 	text-align: center;
 }
 
@@ -207,6 +206,56 @@ figcaption{
 		-ms-grid-columns: auto auto auto;
 	    grid-template-columns: auto auto auto;
 	}
+}
+
+/*modal*/
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlayWork {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: table;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(0.4) blur(2px);
+  -webkit-filter: grayscale(0.4) blur(2px);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.hovereffect p{
+	display: table-cell;
+	vertical-align: middle;
+	opacity: 0;
+	font-size: 20px;
+}
+
+.hovereffect a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.hovereffect:hover p{
+	opacity: 1;
+}
+
+td:last-child{
+	padding: 5px 30px;
 }
 
 /*about*/

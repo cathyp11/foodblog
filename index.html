@@ -5,6 +5,23 @@
     <meta charset="utf-8">
     <title>Cities</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134949766-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-134949766-2');
+	</script>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -22,8 +39,8 @@
 <body>
     <div id="wrap">
         <a class="skip" href="#content">Skip to Content</a>
-        <nav class="navbar navbar-expand-md navbar-light">
-		    <a class="navbar-brand abs" href="#">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        		<a class="navbar-brand abs" href="#">
 		    	<img class="logo" src="images/logo.png" alt="logo" />
 		    </a>
 		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-label="Toggle button">
@@ -46,7 +63,8 @@
 		                <a class="nav-link" href="about">About</a>
 		            </li>
 		        </ul>
-		    </div>
+        	</div>
+		    
 		</nav>
         <header class="heading">
             <div>
@@ -57,7 +75,6 @@
 	        <main>
 	            <div id="content" class="col-xs-12 col-sm-12 col-md-12">
 	                <h2>Hi, I'm Cathy and this is a food blog about the places that I've been to! Please enjoy.</h2>
-	                <p>This will be the main page for my food blog. I will have a landmark icon of each city and its name that I've been to. Once people visit the website, they could click on the city icon that they want to know more about and be led to that page. It'll have a sentence of what this website is about on the top of this page: "Hi, I'm Cathy and this is a food blog about the places that I've been to! Please enjoy." The icons will be named "ann arbor.png" and "seoul.png".</p>
 	                <div class="grids">
 	                    <figure>
 	                        <a href="annarbor">

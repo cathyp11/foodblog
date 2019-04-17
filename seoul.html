@@ -4,6 +4,23 @@
 	<meta charset="utf-8">
 	<title>Seoul</title>
 	<meta name ="viewport" content="width=device-width, initial-scale=1">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134949766-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-134949766-2');
+	</script>
+	<!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<!-- bootstrap -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -21,7 +38,7 @@
 
 	<div id="wrap">
 		<a class="skip" href="#content">Skip to Content</a>
-		<nav class="navbar navbar-expand-md navbar-light">
+		<nav class="navbar navbar-expand-md navbar-light fixed-top">
 		    <a class="navbar-brand abs" href="/week6">
 		    	<img class="logo" src="images/logo.png" alt="logo" />
 		    </a>
@@ -54,18 +71,81 @@
 			</header>
 			<main>
 				<div id="content" class="">
-					<p>About restaurants that I've visited in Seoul. This page would contain a grid format of images with the title of the restaurants under each image which means that this will be like a "gallery" page. The images are all in jpg format and those are badfarmers, byeol, coreanos, downtowner, firebell, kimildo, miltop, tastingroom, and tuktuk. These images are all named after the restaurant so that it's easier for me to use them when creating this page. All images will be in a square-format. More pictures will be added later. Once the user clicks on the image, a modal box will pop-up with more pictures of the restaurant and brief information about the place such as price range, menus, etc.</p>
+					<p>Seoul is my hometown. I probably have visited more than 100 restaurants in the metropolitan area. Please enjoy looking at these few restaurants that I have selected!</p>
 				</div>
 				<div class="gallery">
-					<img src="images/badfarmers.jpg" alt="badfarmers" />
-					<img src="images/byeol.jpg" alt="star" />
-					<img src="images/coreanos.jpg" alt="quesadilla" />
-					<img src="images/downtowner.jpg" alt="downtownerburger" />
-					<img src="images/firebell.jpg" alt="firebellburger" />
-					<img src="images/kimildo.jpg" alt="koreanbbq" />
-					<img src="images/miltop.jpg" alt="bingsoo" />
-					<img src="images/tastingroom.jpg" alt="tastingroom" />
-					<img src="images/tuktuk.jpg" alt="padthai" />
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/badfarmers.jpg" alt="badfarmers" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal1">Bad Farmers</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/byeol.jpg" alt="star" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal2">Byeol</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/coreanos.jpg" alt="quesadilla" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal3">Coreanos</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/downtowner.jpg" alt="downtownerburger" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal4">Downtowner</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/firebell.jpg" alt="firebellburger" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal5">Fire Bell</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/kimildo.jpg" alt="koreanbbq" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal6">Kim Il Do</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/miltop.jpg" alt="bingsoo" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal7">Meal Top</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/tastingroom.jpg" alt="tastingroom" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal8">Tasting Room</a>
+							</p>
+						</div>
+					</div>
+					<div class="hovereffect">
+						<img class="centerBlock img-responsive" src="images/tuktuk.jpg" alt="padthai" />
+						<div class="overlayWork">
+							<p>
+								<a href="#" data-toggle="modal" data-target="#modal9">Tuk Tuk Noodle Thai</a>
+							</p>
+						</div>
+					</div>
 				</div>
 			</main>
 			<footer>
@@ -74,6 +154,278 @@
 		        </div>
 			</footer>
         </div>
+
+        <!-- modals -->
+        <div class="modal" id="modal1" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Bad Farmers</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p> 
+						<p>31 Apgujeong-ro 4-gil, Sinsa-dong, Gangnam-gu, Seoul, South Korea</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Monday - Saturday</td>
+								<td>12PM–9PM</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>11:30AM-8PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+        <div class="modal" id="modal2" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Byeol</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p> 
+						<p>211 S 4th Ave, Ann Arbor, MI 48104</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Monday</td>
+								<td>9AM–6PM</td>
+							</tr>
+							<tr>
+								<td>Tuesday</td>
+								<td>9AM–6PM</td>
+							</tr>
+							<tr>
+								<td>Wednesday</td>
+								<td>9AM–6PM</td>
+							</tr>
+							<tr>
+								<td>Thursday</td>
+								<td>9AM-9PM</td>
+							</tr>
+							<tr>
+								<td>Friday</td>
+								<td>9AM-9PM</td>
+							</tr>
+							<tr>
+								<td>Saturday</td>
+								<td>9AM-9PM</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>10AM-9PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+        <div class="modal" id="modal3" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Coreanos</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p> 
+						<p>46 Noksapyeong-daero 40-gil, Itaewon 1(il)-dong, Yongsan-gu, Seoul, South Korea</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Everyday</td>
+								<td>12PM-11PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+        <div class="modal" id="modal4" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Downtowner</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p> 
+						<p>28-4 Itaewon-ro 42-gil, Hannam-dong, Yongsan-gu, Seoul, South Korea</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Everyday</td>
+								<td>11:30AM–8:30PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="modal" id="modal5" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Fire Bell</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p> 
+						<p>13 Seolleung-ro 72-gil, Daechi 4(sa)-dong, Gangnam-gu, Seoul, South Korea</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Everyday</td>
+								<td>11:30AM-9:30PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal6" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Kim Il Do</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p> 
+						<p>183-8 Nonhyeon-dong, Gangnam-gu, Seoul, South Korea</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Everyday</td>
+								<td>Open 24 hours</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal7" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Meal Top</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p> 
+						<p>429 Apgujeong-dong, Gangnam-gu, Seoul, South Korea</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Everyday</td>
+								<td>10:30AM-9:30PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal8" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Tasting Room</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p> 
+						<p>29 롯데월드몰 5F, Sincheon-dong, Seoul, South Korea</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Everyday</td>
+								<td>10:30AM-12AM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal9" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Tuk Tuk Noodle Thai</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				  	<div class="modal-body">
+						<p><b>Address:</b></p> 
+						<p>161-8 Seongmisan-ro, Yeonnam-dong, Mapo-gu, Seoul, South Korea</p>
+						<p><b>Hours:</b></p>
+						<table>
+							<tr>
+								<td>Everyday</td>
+								<td>11:30AM-10PM</td>
+							</tr>
+						</table>
+				  	</div>
+				  	<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script>
 	function myFunction() {
