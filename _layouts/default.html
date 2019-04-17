@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
 	<meta charset="utf-8">
 	<title>{{ page.title }}</title>
@@ -35,6 +35,7 @@
 	</head>
   <body>
   	<div id="wrap">
+  		{% include header.html %}
 	    {{ content }}
 	    {% include footer.html %}
   	</div>
