@@ -34,6 +34,18 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
   <body>
-    {{ content }}
+  	<div id="wrap">
+	    {{ content }}
+  	</div>
+    <script>
+    function myFunction() {
+        var x = document.getElementById("topnav");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+    </script>
   </body>
 </html>

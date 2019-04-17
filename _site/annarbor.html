@@ -34,7 +34,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
   <body>
-    <!DOCTYPE html>
+  	<div id="wrap">
+	    <!DOCTYPE html>
 <html lang="en" class="gr__cathyp11_github_io">
 <head>
 	<meta charset="utf-8">
@@ -496,5 +497,16 @@
 </body>
 </html>
 
+  	</div>
+    <script>
+    function myFunction() {
+        var x = document.getElementById("topnav");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+    </script>
   </body>
 </html>
