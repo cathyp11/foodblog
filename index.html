@@ -1,9 +1,14 @@
+---
+layout: default
+title: Home
+---
+
 <!DOCTYPE html>
 <html lang="en" class="gr__cathyp11_github_io">
 
 <head>
     <meta charset="utf-8">
-    <title>Cities</title>
+   	<title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134949766-2"></script>
@@ -36,12 +41,14 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
+<h1>{{ "Hello World!" | downcase }}</h1>
+
 <body>
     <div id="wrap">
         <a class="skip" href="#content">Skip to Content</a>
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
         		<a class="navbar-brand abs" href="#">
-		    	<img class="logo" src="images/logo.png" alt="logo" />
+		    	<img class="logo" src="images/logo.png" alt="image of logo" />
 		    </a>
 		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-label="Toggle button">
 		        <span class="navbar-toggler-icon"></span>

@@ -229,10 +229,11 @@ figcaption{
   display: table;
 }
 
+.hovereffect .overlayWork:hover {
+	background-color: #8C2837;
+}
+
 .hovereffect:hover img {
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
-  filter: grayscale(0.4) blur(2px);
-  -webkit-filter: grayscale(0.4) blur(2px);
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -245,13 +246,13 @@ figcaption{
 	font-size: 20px;
 }
 
+.hovereffect:hover p{
+	opacity: 1;
+}
+
 .hovereffect a{
 	text-decoration: none;
 	color: #fff;
-}
-
-.hovereffect:hover p{
-	opacity: 1;
 }
 
 td:last-child{
