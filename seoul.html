@@ -3,7 +3,6 @@ layout: default
 title: Seoul
 ---
 
-
 <div class="container-fluid">
 	<header>
 		<h1>Seoul</h1>
@@ -13,8 +12,18 @@ title: Seoul
 		<div id="content" class="">
 			<p>Seoul is my hometown. I probably have visited more than 100 restaurants in the metropolitan area. Please enjoy looking at these few restaurants that I have selected!</p>
 		</div>
+		<div id="filterApply">
+			<button class="btn selected" onclick="filterSelection('all')"> Show all</button>
+			<button class="btn" onclick="filterSelection('american')"> American</button>
+			<button class="btn" onclick="filterSelection('dessert')"> Dessert</button>
+			<button class="btn" onclick="filterSelection('italian')"> Italian</button>
+			<button class="btn" onclick="filterSelection('korean')"> Korean</button>
+			<button class="btn" onclick="filterSelection('mexican')"> Mexican</button>
+			<button class="btn" onclick="filterSelection('salads')"> Salads</button>
+			<button class="btn" onclick="filterSelection('thai')"> Thai</button>
+		</div>
 		<div class="gallery">
-			<div class="hovereffect">
+			<div class="hovereffect filters salads">
 				<img class="centerBlock img-responsive" src="images/badfarmers.jpg" alt="badfarmers" />
 				<div class="overlayWork">
 					<p>
@@ -22,7 +31,7 @@ title: Seoul
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters mexican">
 				<img class="centerBlock img-responsive" src="images/byeol.jpg" alt="star" />
 				<div class="overlayWork">
 					<p>
@@ -30,7 +39,7 @@ title: Seoul
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters mexican">
 				<img class="centerBlock img-responsive" src="images/coreanos.jpg" alt="quesadilla" />
 				<div class="overlayWork">
 					<p>
@@ -38,7 +47,7 @@ title: Seoul
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters american">
 				<img class="centerBlock img-responsive" src="images/downtowner.jpg" alt="downtownerburger" />
 				<div class="overlayWork">
 					<p>
@@ -46,7 +55,7 @@ title: Seoul
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters american">
 				<img class="centerBlock img-responsive" src="images/firebell.jpg" alt="firebellburger" />
 				<div class="overlayWork">
 					<p>
@@ -54,7 +63,7 @@ title: Seoul
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters korean">
 				<img class="centerBlock img-responsive" src="images/kimildo.jpg" alt="koreanbbq" />
 				<div class="overlayWork">
 					<p>
@@ -62,7 +71,7 @@ title: Seoul
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters dessert">
 				<img class="centerBlock img-responsive" src="images/miltop.jpg" alt="bingsoo" />
 				<div class="overlayWork">
 					<p>
@@ -70,7 +79,7 @@ title: Seoul
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters italian american">
 				<img class="centerBlock img-responsive" src="images/tastingroom.jpg" alt="tastingroom" />
 				<div class="overlayWork">
 					<p>
@@ -78,7 +87,7 @@ title: Seoul
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters thai">
 				<img class="centerBlock img-responsive" src="images/tuktuk.jpg" alt="padthai" />
 				<div class="overlayWork">
 					<p>
@@ -89,6 +98,55 @@ title: Seoul
 		</div>
 	</main>
 </div>
+
+<script type="text/javascript">
+	filterSelection("all")
+	function filterSelection(c) {
+	  var i, filters;
+	  filters = document.getElementsByClassName("filters");
+	  if (c == "all") c = "";
+	  for (i = 0; i < filters.length; i++) {
+	    removeClass(filters[i], "show");
+	    if (filters[i].className.indexOf(c) > -1) addClass(filters[i], "show");
+	  }
+	}
+
+	// Show filtered elements
+	function addClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+	    if (arr1.indexOf(arr2[i]) == -1) {
+	      element.className += " " + arr2[i];
+	    }
+	  }
+	}
+
+	// Hide elements that are not selected
+	function removeClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+	    while (arr1.indexOf(arr2[i]) > -1) {
+	      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+	    }
+	  }
+	  element.className = arr1.join(" ");
+	}
+
+	// Add selected class to the current control button (highlight it)
+	var btnContainer = document.getElementById("filterApply");
+	var btns = btnContainer.getElementsByClassName("btn");
+	for (var i = 0; i < btns.length; i++) {
+	  btns[i].addEventListener("click", function() {
+	    var current = document.getElementsByClassName("selected");
+	    current[0].className = current[0].className.replace(" selected", "");
+	    this.className += " selected";
+	  });
+	}
+</script>
 
 <!-- modals -->
 <div class="modal" id="modal1" tabindex="-1" role="dialog">

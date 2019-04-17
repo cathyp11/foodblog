@@ -12,8 +12,15 @@ title: Ann Arbor
 		<div id="content">
 			<p>Ann Arbor is a college city and a home to the University of Michigan. I have lived here for four years and visited several restaurants that I want to share!</p>
 		</div>
+		<div id="filterApply">
+			<button class="btn selected" onclick="filterSelection('all')"> Show all</button>
+			<button class="btn" onclick="filterSelection('american')"> American</button>
+			<button class="btn" onclick="filterSelection('chinese')"> Chinese</button>
+			<button class="btn" onclick="filterSelection('dessert')"> Dessert</button>
+			<button class="btn" onclick="filterSelection('italian')"> Italian</button>
+		</div>
 		<div class="gallery">
-			<div class="hovereffect">
+			<div class="hovereffect filters dessert">
 				<img class="centerBlock img-responsive" src="images/macaron.jpg" alt="macaron" />
 				<div class="overlayWork">
 					<p>
@@ -21,7 +28,7 @@ title: Ann Arbor
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters italian">
 				<img class="centerBlock img-responsive" src="images/mani.jpg" alt="mani" />
 				<div class="overlayWork">
 					<p>
@@ -29,7 +36,7 @@ title: Ann Arbor
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters chinese">
 				<img class="centerBlock img-responsive" src="images/lee.jpg" alt="lee" />
 				<div class="overlayWork">
 					<p>
@@ -37,7 +44,7 @@ title: Ann Arbor
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters american">
 				<img class="centerBlock img-responsive" src="images/charleys.jpg" alt="goodtimecharleys" />
 				<div class="overlayWork">
 					<p>
@@ -45,7 +52,7 @@ title: Ann Arbor
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters american italian">
 				<img class="centerBlock img-responsive" src="images/pizzahouse.jpg" alt="pizzahouse" />
 				<div class="overlayWork">
 					<p>
@@ -53,7 +60,7 @@ title: Ann Arbor
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters american">
 				<img class="centerBlock img-responsive" src="images/wilmas.jpg" alt="wilma's" />
 				<div class="overlayWork">
 					<p>
@@ -61,7 +68,7 @@ title: Ann Arbor
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters chinese">
 				<img class="centerBlock img-responsive" src="images/chinagate.jpg" alt="chinagate" />
 				<div class="overlayWork">
 					<p>
@@ -69,7 +76,7 @@ title: Ann Arbor
 					</p>
 				</div>
 			</div>
-			<div class="hovereffect">
+			<div class="hovereffect filters chinese">
 				<img class="centerBlock img-responsive" src="images/panda.jpg" alt="pandabon" />
 				<div class="overlayWork">
 					<p>
@@ -80,6 +87,55 @@ title: Ann Arbor
 		</div>
 	</main>
 </div>
+
+<script type="text/javascript">
+	filterSelection("all")
+	function filterSelection(c) {
+	  var i, filters;
+	  filters = document.getElementsByClassName("filters");
+	  if (c == "all") c = "";
+	  for (i = 0; i < filters.length; i++) {
+	    removeClass(filters[i], "show");
+	    if (filters[i].className.indexOf(c) > -1) addClass(filters[i], "show");
+	  }
+	}
+
+	// Show filtered elements
+	function addClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+	    if (arr1.indexOf(arr2[i]) == -1) {
+	      element.className += " " + arr2[i];
+	    }
+	  }
+	}
+
+	// Hide elements that are not selected
+	function removeClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+	    while (arr1.indexOf(arr2[i]) > -1) {
+	      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+	    }
+	  }
+	  element.className = arr1.join(" ");
+	}
+
+	// Add selected class to the current control button (highlight it)
+	var btnContainer = document.getElementById("filterApply");
+	var btns = btnContainer.getElementsByClassName("btn");
+	for (var i = 0; i < btns.length; i++) {
+	  btns[i].addEventListener("click", function() {
+	    var current = document.getElementsByClassName("selected");
+	    current[0].className = current[0].className.replace(" selected", "");
+	    this.className += " selected";
+	  });
+	}
+</script>
 
 <!-- modals -->
 <div class="modal" id="modal1" tabindex="-1" role="dialog">

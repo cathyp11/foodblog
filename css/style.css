@@ -43,6 +43,7 @@ p{
 	color: initial;
 	top: 10px;
 	left: 10px;
+	z-index: 1;
 }
 
 /*nav*/
@@ -179,8 +180,8 @@ figcaption{
 	margin:0 auto;
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: auto auto auto auto;
-    grid-template-columns: auto auto auto auto;
+	-ms-grid-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 	grid-gap: 20px;
 	justify-content: center;
 	justify-items: center;
@@ -196,16 +197,33 @@ figcaption{
 
 @media only screen and (max-width: 600px) {
 	.gallery{
-		-ms-grid-columns: auto auto;
-	    grid-template-columns: auto auto;
+		-ms-grid-columns: repeat(2, 1fr);
+	    grid-template-columns: repeat(2, 1fr);
 	}
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 	.gallery{
-		-ms-grid-columns: auto auto auto;
-	    grid-template-columns: auto auto auto;
+		-ms-grid-columns: repeat(3, 1fr);
+	    grid-template-columns: repeat(3, 1fr);
 	}
+}
+
+#filterApply{
+	margin-bottom: 10px;
+}
+
+.filters {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.btn.selected {
+  background-color: #8C2837;
+  color: white;
+  border-radius: 0;
 }
 
 /*modal*/
@@ -285,6 +303,8 @@ td:last-child{
 
 .about a{
 	color: #000;
+	text-decoration: none;
+	font-size: 14px;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 1023.9px) {
@@ -293,6 +313,13 @@ td:last-child{
 	}
 }
 
+.form{
+	margin: 30px auto;
+}
+
+.form label{
+	margin-bottom: 10px;
+}
 
 /*footer*/
 .centerBlock{
