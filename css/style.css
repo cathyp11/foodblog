@@ -227,10 +227,12 @@ figcaption{
   top: 0;
   left: 0;
   display: table;
+  opacity: 0;
 }
 
 .hovereffect .overlayWork:hover {
 	background-color: #8C2837;
+	opacity: 1;
 }
 
 .hovereffect:hover img {
