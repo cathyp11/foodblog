@@ -99,21 +99,21 @@ main{
 }
 
 /*index*/
-.heading{
+.banner{
 	height: 200px;
 	position: relative;
 }
-.heading>div{
-	height: 330px;
+#heading{
 	width: 80%;
 	background: #fff;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	display: table;
+	text-align: center;
+	font-size: 30px;
 }
-.heading h1{
+#heading h1{
 	display: table-cell;
 	vertical-align: middle;
 }
@@ -267,6 +267,7 @@ figcaption{
 .hovereffect a{
 	text-decoration: none;
 	color: #fff;
+	background-color: #8C2837;
 }
 
 td:last-child{

@@ -3,9 +3,9 @@ layout: default
 title: Home
 ---
 
-<header class="heading">
-    <div>
-        <h1>Welcome to Cathy's Food Blog</h1>
+<header class="banner">
+    <div id="heading">
+        <h1 class="hidden">Welcome to Cathy's Food Blog</h1>
     </div>
 </header>
 <div class="container-fluid">
@@ -29,3 +29,20 @@ title: Home
         </div>
     </main>
 </div>
+<script type="text/javascript">
+    var heading = document.getElementById('heading');
+	var typewriter = new Typewriter(heading, {
+        loop: true
+    });
+
+    typewriter.typeString("Welcome to Cathy's Food Blog")
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('Welcome All Food Lovers')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('Welcome All Travelers')
+        .pauseFor(2500)
+        .start();
+
+</script>
