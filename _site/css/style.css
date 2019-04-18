@@ -79,12 +79,6 @@ p{
 	width: 60px;
 }
 
-@media (max-width: 600px) {
-	.logo{
-		/*width: 40px;*/
-	}
-}
-
 @media (min-width: 768px) {
 .navbar-brand.abs
     {
