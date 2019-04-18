@@ -86,14 +86,14 @@
 			<div class="row form">
 				<div class="col-lg-8 offset-lg-2 col-md-12">
 					<h2>Contact Me</h2>
-					<form action="https://formspree.io/ycpark@umich.edu" method="post">
+					<form name="contact" action="https://formspree.io/ycpark@umich.edu" method="post">
 					<div class="form-group">
 	                    <label for="inputName">Full Name</label>
 	                    <input type="text" class="form-control" id="inputName" placeholder="What's your name?" required="required" name="name">
 	                </div>
 	                <div class="form-group">
                         <label for="inputEmail">Email Address</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="What's your email?" required="required" name="email">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="What's your email?" required="required" name="email" oninvalid="this.setCustomValidity('Please enter valid email')" oninput="setCustomValidity('')">
 	                </div>
 	                <div class="form-group">
                         <label for="inputFood">Favorite Food</label>
@@ -110,6 +110,20 @@
 		</div>
 	</main>
 </div>
+
+<script type="text/javascript">
+	function validateForm() {
+		var email = document.forms["contact"]["email"].value;
+			if (!email.includes("@")) {
+				alert("Email is not in the correct format");
+			}
+		var message = document.forms["contact"]["message"].value;
+			if (message.length >= 500) {
+			alert("Message should be less than 500 words");
+			return false;
+			}
+		}
+</script>
 	    <footer>
     <div class="centerBlock">
         <p>© Cathy Park 2019. All Rights Reserved.</p>
