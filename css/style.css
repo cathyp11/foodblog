@@ -315,6 +315,10 @@ td:last-child{
 	margin-bottom: 10px;
 }
 
+.form .btn{
+	background-color: #8C2837;
+	border-radius: 0;
+}
 /*footer*/
 .centerBlock{
 	display: table;
